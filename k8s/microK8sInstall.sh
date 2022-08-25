@@ -3,7 +3,7 @@
 # install snap ,check cmd is install
 cmd1=`snap`
 
-if [[ $cmd1==snap:* ]]; then
+if [[$cmd1==snap:*]]; then
    #echo "not found"
    yum install epel-release
    yum install yum-plugin-copr
@@ -19,7 +19,7 @@ fi
 # install timezone ,check cmd is install
 cmd2=`ntpdate`  
 
-if [[ $cmd2==ntpdate:* ]]; then
+if [[$cmd2==ntpdate:*]]; then
    #echo "not found"
    yum install ntpdate
    ntpdate ntp.sjtu.edu.cn
@@ -28,9 +28,9 @@ else
 echo "ntpdate already installed "
 fi
 
-cmd2=`pullk8s`
+cmd3=`pullk8s`
 
-if [[ $cmd3==pullk8s:* ]]; then
+if [[$cmd3==pullk8s:*]]; then
    #echo "not found"
    curl -L "https://raw.githubusercontent.com/OpsDocker/pullk8s/main/pullk8s.sh" -o /usr/local/bin/pullk8s
    chmod +x /usr/local/bin/pullk8s
