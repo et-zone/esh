@@ -16,7 +16,8 @@ else
    yum -y install snapd
    systemctl enable --now snapd.socket
    ln -s /var/lib/snapd/snap /snap
-   export PATH=$PATH:~/.jx/bin:/snap/bin
+   echo -e 'SNAPPATH=~/.jx/bin:/snap/bin \nexport PATH=$PATH:SNAPPATH' >> ~/.bashrc
+   source ~/.bashrc
 fi
 
 # install timezone ,check cmd is install
