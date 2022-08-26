@@ -8,6 +8,12 @@ if $Nspace; then
 fi
 echo "NamseSpace = $Nspace"
 
+if test -d ~/.k8sMicro; then
+	echo ""
+else
+	mkdir ~/.k8sMicro
+fi
+
 cat >~/.k8sMicro/namespace.yaml <<EOF
 apiVersion: v1
 kind: Namespace
@@ -89,12 +95,6 @@ metadata:
 EOF
 
 # install NameSpace Rpc Pod
-
-if test -d ~/.k8sMicro; then
-	echo ""
-else
-	mkdir ~/.k8sMicro
-fi
 
 kubectl apply -f ~/.k8sMicro/namespace.yaml
 
