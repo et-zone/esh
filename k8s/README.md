@@ -1,3 +1,4 @@
+资源地址 https://github.com/yaoliu/k8s-micro/blob/master/README_CN.md
 ### 快速安装k8s
 - root用户登录
 - `curl -L https://raw.githubusercontent.com/et-zone/esh/master/k8s/microK8sInstall.sh -o microK8sInstall.sh && sh microK8sInstall.sh`
@@ -6,6 +7,8 @@
   - 即时生效    `source ~/.bashrc` 
 
 
-rpc NameSpace 空间创建
+### rpc NameSpace 空间创建
 
 - `curl -L https://raw.githubusercontent.com/et-zone/esh/master/k8s/rpcNameSpace.sh -o rpcNameSpace.sh && sh rpcNameSpace.sh`
+
+
