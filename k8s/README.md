@@ -10,5 +10,3 @@
 ### rpc NameSpace 空间创建
 
 - `curl -L https://raw.githubusercontent.com/et-zone/esh/master/k8s/rpcNameSpace.sh -o rpcNameSpace.sh && sh rpcNameSpace.sh`
-
-
